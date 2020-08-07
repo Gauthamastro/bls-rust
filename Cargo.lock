@@ -28,6 +28,7 @@ name = "bls"
 version = "0.1.0"
 dependencies = [
  "bls_eth_rust",
+ "hex",
 ]
 
 [[package]]
