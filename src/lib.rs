@@ -5,6 +5,10 @@ This is a wrapper implementation for Pebble on top of bls-eth-rust library.
 use bls_eth_rust::*;
 use hex;
 
+pub type bls_private_key = SecretKey;
+pub type bls_public_key = PublicKey;
+pub type bls_signature = Signature;
+
 // Creates a new cryptographically secure secret key
 pub fn rand_secretkey() -> SecretKey {
     let mut key = unsafe { SecretKey::uninit() };
