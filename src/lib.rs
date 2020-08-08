@@ -84,4 +84,15 @@ mod tests {
         let pubkey2 = publickey_from_bytes(&pubkeyhex1);
         assert_eq!(pubkey2, key.get_publickey())
     }
+
+    #[test]
+    fn test_signing_verifying(){
+        let key = rand_secretkey();
+        let msg_hex = "5656565656565656565656565656565656565656565656565656565656565656";
+        let msg = hex::decode(&msg_hex).unwrap();
+        let pubkey = key.get_publickey();
+        let sig = key.sign(&msg);
+        assert!(sig.verify(&pubkey, &msg));
+        assert_eq!(msg.len(),32);
+    }
 }
