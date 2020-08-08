@@ -8,4 +8,5 @@ edition = "2018"
 
 [dependencies]
 hex = "0.4.0"
-bls_eth_rust = {path= "./bls-eth-rust" }
+bls_eth_rust = {path= "./bls-eth-rust" } # This should be changed before publishing to crates.io
+#bls_eth_rust = "0.0.2"
